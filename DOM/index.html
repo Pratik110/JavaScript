@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I'm Heading 1</h1>
+    <h1>I'm Heading 2</h1>
+    <div>
+        <p>I'm child 1 of div</p>
+        <p>I'm child 2 of div</p>
+    </div>
+    <button>Click Me</button>
+
+    <script>
+        console.log("Hello from JS")
+        // let h1Element = document.querySelector("h1");
+        // console.log(h1Element);
+        // console.log(h1Element.innerText);
+        // let allH1Element = document.querySelectorAll("h1");
+        // console.log(allH1Element);
+        // console.log(allH1Element[0].innerText);
+        // console.log(allH1Element[1].innerText);
+
+        let h2Element = document.createElement("h2");
+        h2Element.innerText = "I'm Heading 2";
+        console.log(h2Element);
+        console.log(h2Element.innerText);
+        let bodyElement = document.querySelector("body");
+        bodyElement.appendChild(h2Element);
+
+
+        //set and get attribute , adding class to element
+
+        let div = document.createElement("div");
+        div.innerText = "I am a div";
+        console.log(div);
+        // div.setAttribute("class","first-div");
+        // div.setAttribute("id","the-div");
+
+        div.setAttribute("class","first second");
+
+        div.setAttribute("customAttr","randomValue");
+        //Process to add class to existing class, setAttribute will override if set again
+        div.classList.add("third");
+        div.classList.add("fourth");
+
+
+
+</script>
+</body>
+</html>
